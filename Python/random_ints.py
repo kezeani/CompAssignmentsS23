@@ -1,7 +1,12 @@
 import random
 
 def random_ints():
-    # Your code here!
+    ans = []
+    while True:
+        n = random.randint(1, 10)
+        ans.append(n)
+        if n == 6:
+            return ans
 
 
 def test():

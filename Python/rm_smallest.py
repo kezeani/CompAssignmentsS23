@@ -1,7 +1,22 @@
 def rm_smallest(d):
-    # Your code here!
-    return 0;
+    ans = d
+    length = len(ans)
+    keys = list(ans)
+    if length == 0 or length == 1:
+        return {}
+    else:
+        lst = list(ans.values())
+        min = lst[0]
+        index = 0
+        for i in range(len(lst)):
+            if lst[i] < min:
+                min = lst[i]
+                index = i
+        del ans[keys[index]]
+    print(ans)
+    return ans
 
+    
 def test():
     assert 'a' in rm_smallest({'a':1,'b':-10}).keys()
     assert not 'b' in rm_smallest({'a':1,'b':-10}).keys()
